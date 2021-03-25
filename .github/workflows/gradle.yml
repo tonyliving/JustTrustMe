@@ -25,6 +25,14 @@ jobs:
       uses: nttld/setup-ndk@v1.0.2
       with:    
         ndk-version: r21d
+    - name: Android NDK toolchain Setup
+      uses: ravinderjangra/android-ndk-toolchain-setup@0.2
+      with:
+       api: '21'
+       arch: 'x64'
+       install-location: 'toolchains'
+       force: true
+       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
