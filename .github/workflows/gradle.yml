@@ -50,4 +50,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            app/build/outputs/apk/app-release-unsigned.apk
+            ${{steps.prepare_release.outputs.apk_path}}
